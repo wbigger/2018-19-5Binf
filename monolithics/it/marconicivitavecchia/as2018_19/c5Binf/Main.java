@@ -27,13 +27,20 @@ import javax.swing.*;
 public class Main extends JFrame {
 	
 	public Main() {
-		super("5Binf rules");
+		super("Project X");
 		super.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-		super.add(new JLabel("Hello monolithic"));
+		
+		StringBuilder sb = new StringBuilder();
+		sb.append("<html>");
+		sb.append("<h1>Item list</h1>");
+		sb.append("</html>");
+		String htmlText = sb.toString();
+		
+		super.add(new JLabel(htmlText));
 		super.pack();
 		super.setVisible(true);
 		 
-		System.out.println("Monolithic");
+		System.out.println("I am a monolithics application written in Java Swing.");
 		
 		
 	}
