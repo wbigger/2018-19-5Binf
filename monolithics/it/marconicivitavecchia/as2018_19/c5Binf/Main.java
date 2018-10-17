@@ -30,10 +30,29 @@ public class Main extends JFrame {
 		super("Project X");
 		super.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		
+		// Use string builder for speed and memory
 		StringBuilder sb = new StringBuilder();
 		sb.append("<html>");
-		sb.append("<h1>Item list</h1>");
+		sb.append("<h1>Command list</h1>");
+		// create a table
+		sb.append("<div style='display:table'>");
+		
+		// create a row
+		sb.append("<div style='display:table-row'>");
+		
+		sb.append("<div style='display:table-cell'>");
+		sb.append("Name");
+		sb.append("</div>");
+		sb.append("<div style='display:table-cell'>");
+		sb.append("Description");
+		sb.append("</div>");
+		
+		sb.append("</div>");
+		
+		sb.append("</div>");
 		sb.append("</html>");
+		
+		// convert string builder to string when done with string manipulation
 		String htmlText = sb.toString();
 		
 		super.add(new JLabel(htmlText));
