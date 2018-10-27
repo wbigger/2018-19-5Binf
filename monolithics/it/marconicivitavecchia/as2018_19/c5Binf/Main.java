@@ -29,26 +29,53 @@ public class Main extends JFrame {
 	public Main() {
 		super("Project X");
 		super.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+		super.setSize(600, 600);
 		
 		// Use string builder for speed and memory
 		StringBuilder sb = new StringBuilder();
 		sb.append("<html>");
+		
+		// Put the title
 		sb.append("<h1>Command list</h1>");
-		// create a table
-		sb.append("<div style='display:table'>");
 		
-		// create a row
-		sb.append("<div style='display:table-row'>");
+		// Create a table
+		sb.append("<div style=\"display:table;width:100%\">");
 		
-		sb.append("<div style='display:table-cell'>");
+		// Header row
+		sb.append("<div style=\"display:table-row\">");
+		
+		// Fill the cells
+		sb.append("<div style=\"display:table-cell\">");
 		sb.append("Name");
 		sb.append("</div>");
-		sb.append("<div style='display:table-cell'>");
+		sb.append("<div style=\"display:table-cell\">");
 		sb.append("Description");
 		sb.append("</div>");
 		
+		// close header row div
 		sb.append("</div>");
 		
+		// Row 1
+		sb.append("<div style=\"display:table-row\">");
+		sb.append("<div style=\"display:table-cell\">");
+		sb.append("Bring me a coffee");
+		sb.append("</div>");
+		sb.append("<div style=\"display:table-cell\">");
+		sb.append("Prepare a coffee and bring it to the user");
+		sb.append("</div>");
+		sb.append("</div>");
+		
+		// Row 2
+		sb.append("<div style=\"display:table-row\">");
+		sb.append("<div style=\"display:table-cell\">");
+		sb.append("Turn on the lights");
+		sb.append("</div>");
+		sb.append("<div style=\"display:table-cell\">");
+		sb.append("Turn on the lights of current location");
+		sb.append("</div>");
+		sb.append("</div>");
+				
+		// close table div
 		sb.append("</div>");
 		sb.append("</html>");
 		
@@ -56,9 +83,10 @@ public class Main extends JFrame {
 		String htmlText = sb.toString();
 		
 		super.add(new JLabel(htmlText));
-		super.pack();
 		super.setVisible(true);
 		 
+		System.out.println(htmlText);
+		
 		System.out.println("I am a monolithics application written in Java Swing.");
 		
 		
